@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  height: 10vh;
+  font-size: 1.5rem;
+  padding: 1rem;
+  align-items: center;
+  position: relative;
+  /* background-color: antiquewhite; */
+}
+
+.nav-list {
+  display: flex;
+  gap: 30px;
+  list-style-type: none;
+  /* background-color: aqua; */
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: gray;
+}
+#username {
+  border: none;
+  background-color: #88c4ff82;
+  border-radius: 10px;
+  padding: 0.4rem;
+  font-size: 1rem;
+  padding: 5px 30px;
+  color: dodgerblue;
+}
+
+main {
+  display: flex;
+  height: 90vh;
+  /* background-color: black; */
+}
+.right {
+  padding: 2rem;
+  gap: 30px;
+  float: right;
+  /* background-color: aquamarine; */
+}
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 5rem 10rem;
+  line-height: 2rem;
+  font-size: 1.2rem;
+  /* background-color: blue; */
+}
+.left h1 {
+  color: rgb(11, 133, 255);
+}
+.left button {
+  background-color: dodgerblue;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  padding: 20px 30px;
+  border-radius: 20px;
+}
+img {
+  min-width: 450px;
+  width: 100%;
+  height: auto;
+}
+
+/* Hamburger menu styles */
+#hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  #hamburger {
+  display: block;
+  transform: translate(250px);
+   
+  }
+  #username{
+    transform: translate(-100px);
+  }
+   #hamburger:focus ~.nav-list{
+      display: block;
+    }
+  .nav-list {
+    text-align: right;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 10vh;
+    right: 0;
+    width: 100%;
+    background-color: white;
+    padding: 1rem 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 1000;
+  }
+  .nav-list.active {
+    display: flex;
+  }
+  nav {
+    position: relative;
+  }
+  main {
+    flex-direction: column;
+    height: auto;
+  }
+  .left, .right {
+    width: 100vw;
+    padding: 1rem 2rem;
+  }
+  .left {
+    padding-top: 2rem;
+    font-size: 1rem;
+  }
+  .left button {
+    font-size: 1.2rem;
+    padding: 1rem 1.5rem;
+  }
+}
