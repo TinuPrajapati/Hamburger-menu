@@ -19,7 +19,7 @@ nav {
 
 .nav-list {
   display: flex;
-  gap: 30px;
+  gap: 1.6rem;
   list-style-type: none;
   /* background-color: aqua; */
 }
@@ -34,7 +34,7 @@ nav {
   border-radius: 10px;
   padding: 0.4rem;
   font-size: 1rem;
-  padding: 5px 30px;
+  padding: 0.4rem 1.6rem;
   color: dodgerblue;
 }
 
@@ -45,7 +45,7 @@ main {
 }
 .right {
   padding: 2rem;
-  gap: 30px;
+  gap: 1.6rem;
   float: right;
   /* background-color: aquamarine; */
 }
@@ -66,8 +66,8 @@ main {
   border: none;
   color: white;
   font-size: 1.5rem;
-  padding: 20px 30px;
-  border-radius: 20px;
+  padding: 1.5rem 1.9rem;
+  border-radius: 1.5rem;
 }
 img {
   min-width: 450px;
@@ -89,11 +89,11 @@ img {
 @media (max-width: 600px) {
   #hamburger {
   display: block;
-  transform: translate(250px);
+  transform: translate(15rem);
    
   }
   #username{
-    transform: translate(-100px);
+    transform: translate(-4rem);
   }
    #hamburger:focus ~.nav-list{
       display: block;
